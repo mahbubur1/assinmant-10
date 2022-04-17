@@ -1,7 +1,11 @@
 import Header from "./Components/Shared/Header/Header";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Components/Pages/Home/Home";
+import Home from "./Components/Home/Home/Home";
+import Services from "./Components/Pages/Services/Services";
+import Footer from "./Components/Shared/Footer/Footer";
+import AboutMe from "./Components/Pages/AboutMe/AboutMe";
+import Login from "./Components/Pages/Login/Login";
 
 function App() {
   return (
@@ -9,7 +13,12 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
+        <Route path="/aboutMe" element={<AboutMe></AboutMe>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
