@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 
-import BannerImage1 from "../../Images/Banner/freestocks-9UVmlIb0wJU-unsplash.jpg";
-import BannerImage2 from "../../Images/Banner/irene-strong-v2aKnjMbP_k-unsplash.jpg";
-import BannerImage3 from "../../Images/Banner/tamara-bellis-Brl7bqld05E-unsplash.jpg";
+import BannerImage1 from "../../../Images/Banner/freestocks-9UVmlIb0wJU-unsplash.jpg";
+import BannerImage2 from "../../../Images/Banner/irene-strong-v2aKnjMbP_k-unsplash.jpg";
+import BannerImage3 from "../../../Images/Banner/tamara-bellis-Brl7bqld05E-unsplash.jpg";
 
 const Banner = () => {
   return (

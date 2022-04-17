@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button,Col } from "react-bootstrap";
-import '../../Shared/CustomCss/Custom.css'
+import '../../../Shared/CustomCss/Custom.css'
 
 const Service = ({ service }) => {
   const { name, price, description, img } = service;
