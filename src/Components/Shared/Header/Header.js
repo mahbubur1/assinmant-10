@@ -16,10 +16,10 @@ const Header = () => {
       
       </Nav>
       <Nav>
-        <Nav.Link href="home#services">Services</Nav.Link>
-        <Nav.Link as={Link} to="/aboutMe">AboutME</Nav.Link>
+        <Nav.Link href="home#services">SERVICES</Nav.Link>
+        <Nav.Link as={Link} to="/aboutMe">ABOUT ME</Nav.Link>
         <Nav.Link eventKey={2} as={Link} to="/login">
-         Login
+        LOGIN
         </Nav.Link>
       </Nav>
     </Navbar.Collapse>
