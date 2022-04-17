@@ -5,9 +5,9 @@ import logo from "../../Images/logo.png";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  sticky="top">
     <Container>
-    <Navbar.Brand href="#home">
+    <Navbar.Brand as={Link} to="/">
        <img src={logo} alt="" />
         </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -16,7 +16,7 @@ const Header = () => {
       
       </Nav>
       <Nav>
-      <Nav.Link href="home#services">Services</Nav.Link>
+        <Nav.Link href="home#services">Services</Nav.Link>
         <Nav.Link as={Link} to="/aboutMe">AboutME</Nav.Link>
         <Nav.Link eventKey={2} as={Link} to="/login">
          Login
