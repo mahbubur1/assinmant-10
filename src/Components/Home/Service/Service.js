@@ -1,12 +1,12 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button,Col } from "react-bootstrap";
 
 const Service = ({ service }) => {
   const { name, price, description, img } = service;
   return (
-    <>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={img} />
+    <Col sm>
+      <Card>
+        <Card.Img variant="top" className="w-100" src={img} />
         <Card.Body>
           <Card.Title>
             {name}
@@ -20,7 +20,7 @@ const Service = ({ service }) => {
           <Button variant="primary">Checkout</Button>
         </Card.Body>
       </Card>
-    </>
+    </Col>
   );
 };
 

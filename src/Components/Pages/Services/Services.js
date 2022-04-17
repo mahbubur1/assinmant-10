@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Service from '../../Home/Service/Service';
+import {Row} from "react-bootstrap";
 import './Services.css'
 
 const Services = () => {
@@ -14,15 +15,17 @@ const Services = () => {
     return (
         <div id="services" className='mt-5'>
             <h1 className='mb-4 text-center'>Our Services</h1>
-           <div className=' container custom-grid'>
+            <div  className='container g-2'>
+           <Row>
            {
-                services.map(service =><Service 
+               services.map(service =><Service 
                 key={service.id}
                 service={service}
                 >
                 </Service>)
             }
-           </div>
+           </Row>
+          </div>
         </div>
     );
 };
