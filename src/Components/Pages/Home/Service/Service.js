@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { Card, Button,Col } from "react-bootstrap";
 import '../../../Shared/CustomCss/Custom.css'
 
@@ -18,7 +19,11 @@ const Service = ({ service }) => {
           <Card.Title>
               Price: {price}
           </Card.Title>
-          <Button className="button-style">Checkout</Button>
+          <Button className="button-style w-100">
+            <Link className="text-decoration-none text-light" to="/checkout">
+            Checkout
+            </Link>
+            </Button>
         </Card.Body>
       </Card>
     </Col>

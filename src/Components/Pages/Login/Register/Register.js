@@ -26,11 +26,11 @@ const Register = () => {
         const password = passwordRef.current.value;
 
         await createUserWithEmailAndPassword(email, password);
-        navigate("/login")  
+        navigate("/home")  
     }
   return (
     <div className="container w-25 mx-auto my-5">
-      <h2 className="custom-text-color text-center mt-2 mb-3">-  Please Register  -</h2>
+      <h2 className="custom-text-color text-center mt-2 mb-3">-  Please SignUp  -</h2>
       <Form onSubmit={handleFormRegister} >
           <Form.Group className="mb-3">
         <Form.Control type="text" ref={nameRef} placeholder="Your Name" />
@@ -41,7 +41,7 @@ const Register = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Control type="password" ref={passwordRef} placeholder="Password" />
         </Form.Group>
-        <Button variant=" mx-auto d-block mb-2" className="button-style w-100 text-light" type="submit">
+        <Button variant="mx-auto d-block mb-2" className="button-style w-100 text-light" type="submit">
           Submit
         </Button>
         <p>

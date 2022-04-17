@@ -7,6 +7,8 @@ import AboutMe from "./Components/Pages/AboutMe/AboutMe";
 import Login from "./Components/Pages/Login/Login/Login";
 import Register from "./Components/Pages/Login/Register/Register";
 import NotFoundPage from "./Components/Shared/NotFoundPage/NotFoundPage";
+import Blogs from "./Components/Pages/Blogs/Blogs";
+import Checkout from "./Components/Pages/Checkout/Checkout"
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/aboutMe" element={<AboutMe></AboutMe>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/checkout" element={<Checkout></Checkout>}></Route>
         <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
