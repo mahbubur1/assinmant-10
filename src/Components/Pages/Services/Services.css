@@ -1,0 +1,6 @@
+.custom-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    grid-gap: 20px;
+}

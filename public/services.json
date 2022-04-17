@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Wedding Photography",
+        "price": "5000 TK",
+        "description": "Quick Set-up SoftBox And Single Off-camera Flashes. This Soft Box Is Extremely Versatile When Shooting. It Can Be Placed Close To Your Subjects For Formal Portraits, Creating A Soft Wraparound Light.",
+        "img": "https://i.ibb.co/Q9H87hf/Background-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Birthday Photography",
+        "price": "3000 TK",
+        "description": "4 hour shoot. portrait light setup including full drama DSLR Camera. All edited photos delivery on dvd.All printed photos delivery with matte/glossy paper",
+        "img": "https://i.ibb.co/x2tJj5z/Background-4.png"
+
+    },
+    {
+        "id": 3,
+        "name": "Studio Photo Shoot",
+        "price": "3500 Tk",
+        "description": "3 Dress PhotoShoot. 15 picture with  special edit .All printed photos delivery with matte/glossy paper",
+        "img": "https://i.ibb.co/XDcJMmq/Background-3.png"
+    },
+    {
+        "id": 4,
+        "name": "Newborn Baby  PhotoShoot",
+        "price": "2000 TK",
+        "description": "Studio session.  unlimited photos.  best 20 special edited photos.  1.5 hours session.",
+        "img": "https://i.ibb.co/37044Qw/Background-2.png"
+    }  
+]
+
+
+

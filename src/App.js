@@ -8,7 +8,7 @@ import Login from "./Components/Pages/Login/Login";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
       <Footer></Footer>
-    </div>
+    </>
   );
 }
 
