@@ -15,3 +15,10 @@
 .button-style:hover{
     background-color: #1d720a;
 }
+.link {
+    color: white;
+}
+.link-active {
+    color: black;
+    background: orange;
+}

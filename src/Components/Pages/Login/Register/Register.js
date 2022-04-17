@@ -5,6 +5,7 @@ import auth from "../../../../firebase.init";
 import { Link, useNavigate } from "react-router-dom";
 import '../../../Shared/CustomCss/Custom.css'
 import { useRef } from "react";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const nameRef = useRef('');
@@ -29,7 +30,7 @@ const Register = () => {
         navigate("/home")  
     }
   return (
-    <div className="container w-25 mx-auto my-5">
+    <div className="container w-50 mx-auto my-5">
       <h2 className="custom-text-color text-center mt-2 mb-3">-  Please SignUp  -</h2>
       <Form onSubmit={handleFormRegister} >
           <Form.Group className="mb-3">
@@ -41,10 +42,10 @@ const Register = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Control type="password" ref={passwordRef} placeholder="Password" />
         </Form.Group>
-        <Button variant="mx-auto d-block mb-2" className="button-style w-100 text-light" type="submit">
+        <Button variant=" d-block mb-2" className="button-style w-75 text-light mx-auto" type="submit">
           Submit
         </Button>
-        <p>
+        <p className=" text-center">
           Already have an account?
           <Link
             to="/login"
@@ -52,8 +53,9 @@ const Register = () => {
           >
             Please Login
           </Link>
-        </p>
+          </p>
       </Form>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
