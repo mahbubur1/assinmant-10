@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button,Col } from "react-bootstrap";
+import '../../Shared/CustomCss/Custom.css'
 
 const Service = ({ service }) => {
   const { name, price, description, img } = service;
@@ -17,7 +18,7 @@ const Service = ({ service }) => {
           <Card.Title>
               Price: {price}
           </Card.Title>
-          <Button variant="primary">Checkout</Button>
+          <Button className="button-style">Checkout</Button>
         </Card.Body>
       </Card>
     </Col>

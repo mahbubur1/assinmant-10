@@ -7,7 +7,7 @@ import BannerImage3 from "../../Images/Banner/tamara-bellis-Brl7bqld05E-unsplash
 
 const Banner = () => {
   return (
-    <Carousel>
+    <Carousel style={{marginBottom: '80px'}}>
       <Carousel.Item interval={1000}>
         <img className="d-block w-100" src={BannerImage1} alt="First slide" />
         <Carousel.Caption>

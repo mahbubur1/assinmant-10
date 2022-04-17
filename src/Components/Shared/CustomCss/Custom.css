@@ -1,0 +1,17 @@
+.text-color{
+    color:#3e454c;
+}
+.deep-color-background{
+    background-color: #b9dcb1;
+}
+.light-color-background{
+   background-color:  #e5ffdf; 
+}
+.button-style{
+    background-color:  #80db6c;
+    border: none;
+    
+}
+.button-style:hover{
+    background-color: #1d720a;
+}

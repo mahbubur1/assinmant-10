@@ -2,10 +2,11 @@ import React from "react";
 import { Container, Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import logo from "../../Images/logo.png";
+import '../../Shared/CustomCss/Custom.css'
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  sticky="top">
+    <Navbar collapseOnSelect expand="lg"  className="light-color-background"  sticky="top">
     <Container>
     <Navbar.Brand as={Link} to="/">
        <img src={logo} alt="" />
