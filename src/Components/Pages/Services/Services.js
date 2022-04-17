@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Service from '../../Home/Service/Service';
 import {Row} from "react-bootstrap";
-import './Services.css'
+
 
 const Services = () => {
     const [services,setServices] =useState([])
@@ -18,7 +18,8 @@ const Services = () => {
             <div  className='container g-2'>
            <Row>
            {
-               services.map(service =><Service 
+               services.map(service =>
+               <Service 
                 key={service.id}
                 service={service}
                 >
