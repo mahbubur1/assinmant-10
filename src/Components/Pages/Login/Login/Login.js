@@ -6,7 +6,7 @@ import '../../../Shared/CustomCss/Custom.css'
 const Login = () => {
   return (
     <div className="container w-25 mx-auto my-5">
-      <h2 className="text-color text-center mt-2 mb-3">-  Please Login   -</h2>
+      <h2 className="custom-text-color text-center mt-2 mb-3">-  Please Login   -</h2>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control
@@ -22,7 +22,7 @@ const Login = () => {
             required
           />
         </Form.Group>
-        <Button variant=" mx-auto d-block mb-2" className="button-style w-100 text-light" type="submit">
+        <Button variant="mx-auto d-block mb-2" className="button-style w-100 text-light" type="submit">
           Login
         </Button>
       </Form>
