@@ -9,9 +9,7 @@
 }
 .button-style{
     background-color:  #80db6c;
-    border: none;
-
-    
+    border: none; 
 }
 .button-style:hover{
     background-color: #1d720a;

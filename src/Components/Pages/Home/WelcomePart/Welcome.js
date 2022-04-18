@@ -19,8 +19,8 @@ const Welcome = () => {
               <h6 className="card-text mt-4">
               THANK YOU FOR VISITING MY WEBSITE AND EXPLORING MY WORK. YOU ARE ON ONE OF THE MOST EXCITING AND IMPORTANT JOURNEYS OF YOUR LIFE, HOW EXCITING! YOU HAVE COME TO A PLACE OF INSPIRATION, EXPERIENCE AND KNOWLEDGE. HOPEFULLY MY WORK CONNECTS WITH YOU ON MANY LEVELS - THANK YOU FOR VISITING!
               </h6>
-              <Button classNameName="button-style">
-                  <Link classNameName="text-decoration-none" to="/myphotography">MY PHOTOGRAPHY</Link>
+              <Button className="button-style mt-5 ms-5">
+                  <Link className="text-decoration-none text-light" to="/myphotography">GO TO MY PHOTOGRAPHY</Link>
               </Button>
             </div>
           </div>
