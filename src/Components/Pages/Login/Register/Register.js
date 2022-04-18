@@ -1,5 +1,5 @@
 import React from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
 import { Form, Button } from "react-bootstrap";
 import auth from "../../../../firebase.init";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,8 @@ import '../../../Shared/CustomCss/Custom.css'
 import { useRef } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import Loading from "../../../Shared/Loading/Loading";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const nameRef = useRef('');
@@ -15,7 +17,8 @@ const Register = () => {
   const navigate= useNavigate();
 
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
+    const [updateProfile, updating, updatError] = useUpdateProfile(auth);
     let errorMessage;
 
     if (loading) {
@@ -25,7 +28,7 @@ const Register = () => {
       console.log("user", user);
      }
      if (error) {
-      errorMessage= <p className='text-danger'>{error?.message} </p>
+      errorMessage= <p className='text-danger'>{error?.message}  </p>
     }
 
 
@@ -36,6 +39,8 @@ const Register = () => {
         const password = passwordRef.current.value;
 
         await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName:name });
+        toast('Updated profile')
         navigate("/home")  
     }
   return (
@@ -66,6 +71,7 @@ const Register = () => {
           </p>
       </Form>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };
