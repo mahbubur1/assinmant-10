@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 
-import BannerImage1 from "../../../Images/Banner/freestocks-9UVmlIb0wJU-unsplash.jpg";
-import BannerImage2 from "../../../Images/Banner/irene-strong-v2aKnjMbP_k-unsplash.jpg";
-import BannerImage3 from "../../../Images/Banner/tamara-bellis-Brl7bqld05E-unsplash.jpg";
+import BannerImage1 from "../../../Images/Banner/wedding (2).jpg";
+import BannerImage2 from "../../../Images/Banner/sea.jpg";
+import BannerImage3 from "../../../Images/Banner/studio.jpg";
 
 const Banner = () => {
   return (
@@ -11,24 +11,19 @@ const Banner = () => {
       <Carousel.Item interval={1000}>
         <img className="d-block w-100" src={BannerImage1} alt="First slide" />
         <Carousel.Caption>
-          <h3>WEDDING PHOTOGRAPHY</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>WEDDING</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
         <img className="d-block w-100" src={BannerImage2} alt="Second slide" />
         <Carousel.Caption>
-          <h3>PRE WEDDING SHOOTS</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>TRAVEL</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={BannerImage3} alt="Third slide" />
         <Carousel.Caption>
-          <h3>PROFESSIONAL VIDEOS</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>PROFESSIONAL PHOTOSHOOT</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
