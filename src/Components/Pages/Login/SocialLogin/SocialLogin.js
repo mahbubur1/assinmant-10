@@ -4,16 +4,24 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../../../firebase.init";
 import Google from "../../../Images/social/google.png";
 import Github from "../../../Images/social/github.png"
+import Loading from "../../../Shared/Loading/Loading";
 
 const SocialLogin = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const [signInWithGithub, userGit, loadingGit, errorGit] = useSignInWithGithub(auth);
+
     let errorMessage;
-    if (error) {
-        errorMessage= <p className='text-danger'>{error?.message} </p>
+
+    if (loading || loadingGit) {
+      return <Loading></Loading>
     }
-    if (user) {
+
+    if (error || errorGit) {
+        errorMessage= <p className='text-danger'>{error?.message} {errorGit?.message} </p>
+    }
+
+    if (user || userGit) {
         navigate("/home")
     }
   return (

@@ -24,10 +24,10 @@ const Header = () => {
       
       </Nav>
       <Nav>
-        <Nav.Link as={Link} to="/home" className={({ isActive }) => (isActive ? "link-active" : "link")}>HOME</Nav.Link>
-        <Nav.Link href="home#services" className={({ isActive }) => (isActive ? "link-active" : "link")}>SERVICES</Nav.Link>
-        <Nav.Link as={Link} to="/aboutMe" className={({ isActive }) => (isActive ? "link-active" : "link")}>ABOUT ME</Nav.Link>  
-        <Nav.Link as={Link} to="/blogs" className={({ isActive }) => (isActive ? "link-active" : "link")}>BLOGS</Nav.Link>  
+        <Nav.Link as={Link} to="/home" >HOME</Nav.Link>
+        <Nav.Link href="home#services">SERVICES</Nav.Link>
+        <Nav.Link as={Link} to="/aboutMe" >ABOUT ME</Nav.Link>  
+        <Nav.Link as={Link} to="/blogs">BLOGS</Nav.Link>  
         {
           user ?(
             <Button

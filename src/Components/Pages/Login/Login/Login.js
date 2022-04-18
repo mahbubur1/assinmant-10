@@ -5,6 +5,7 @@ import {Link, useNavigate,useLocation} from "react-router-dom";
 import auth from "../../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import '../../../Shared/CustomCss/Custom.css'
+import Loading from "../../../Shared/Loading/Loading";
 
 const Login = () => {
   const emailRef = useRef('');
@@ -13,16 +14,22 @@ const Login = () => {
   const location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
- 
   const [
     signInWithEmailAndPassword,
     user,
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  let errorMessage;
 
+  if (loading) {
+    return <Loading></Loading>
+  }
   if (user) {
     navigate(from, { replace: true });
+  }
+  if (error) {
+    errorMessage= <p className='text-danger'>{error?.message} </p>
   }
 
   const handleLogin = event =>{
@@ -56,6 +63,7 @@ const Login = () => {
           Login
         </Button>
       </Form>
+      {errorMessage}
       <p className="text-center">
         New to Mahbub Photography?   <Link
           to="/register"

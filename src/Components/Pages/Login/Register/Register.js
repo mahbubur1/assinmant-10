@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import '../../../Shared/CustomCss/Custom.css'
 import { useRef } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import Loading from "../../../Shared/Loading/Loading";
 
 const Register = () => {
   const nameRef = useRef('');
@@ -15,10 +16,18 @@ const Register = () => {
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+    let errorMessage;
 
+    if (loading) {
+      return <Loading></Loading>
+    }
     if(user){
       console.log("user", user);
      }
+     if (error) {
+      errorMessage= <p className='text-danger'>{error?.message} </p>
+    }
+
 
     const handleFormRegister = async (event) => {
         event.preventDefault();
@@ -45,6 +54,7 @@ const Register = () => {
         <Button variant=" d-block mb-2" className="button-style w-75 text-light mx-auto" type="submit">
           Submit
         </Button>
+        {errorMessage}
         <p className=" text-center">
           Already have an account?
           <Link
