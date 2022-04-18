@@ -10,6 +10,7 @@ import NotFoundPage from "./Components/Shared/NotFoundPage/NotFoundPage";
 import Blogs from "./Components/Pages/Blogs/Blogs";
 import Checkout from "./Components/Pages/Checkout/Checkout"
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
+import Services from "./Components/Pages/Home/Services/Services";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/aboutMe" element={<AboutMe></AboutMe>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>

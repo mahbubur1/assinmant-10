@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='d-inline-block w-100 mt-5 light-color-background d-flex text-secondary'>
+        <div className='d-inline-block w-100 mt-5 light-color-background  text-secondary'>
+            <div className='d-flex'>
+
+            
           <div className='my-5 mx-auto'>
               <img src={logo} alt="" />
               <p className='pt-3'>World Class Photography Centre</p>
@@ -20,6 +23,8 @@ const Footer = () => {
               <br />
               <Link className='text-decoration-none text-secondary' to="/login">LOGIN</Link>
               </div>
+              </div>
+             <p className='text-center pb-5'><small>&copy;copyright All content by MAHBUB PHOTOGRAPHY</small></p>
         </div>
     );
 };

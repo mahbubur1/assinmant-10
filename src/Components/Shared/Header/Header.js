@@ -25,7 +25,7 @@ const Header = () => {
       </Nav>
       <Nav className="fs-6 fw-bolder">
         <Nav.Link as={Link} to="/home" >HOME</Nav.Link>
-        <Nav.Link href="home#services">SERVICES</Nav.Link>
+        <Nav.Link as={Link} to="/services">SERVICES</Nav.Link>
         <Nav.Link as={Link} to="/checkout">CHECKOUT</Nav.Link>
         <Nav.Link as={Link} to="/blogs">BLOGS</Nav.Link>  
         <Nav.Link as={Link} to="/aboutMe" >ABOUT ME</Nav.Link>  
