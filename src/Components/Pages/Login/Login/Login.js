@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Form,Button  } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import {Link, useNavigate,useLocation} from "react-router-dom";
 import auth from "../../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -20,6 +20,7 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   let errorMessage;
 
   if (loading) {
@@ -31,13 +32,18 @@ const Login = () => {
   if (error) {
     errorMessage= <p className='text-danger'>{error?.message} </p>
   }
-
+  
   const handleLogin = event =>{
     event.preventDefault();
     const email= emailRef.current.value;
     const password = passwordRef.current.value;
-
+    
     signInWithEmailAndPassword(email,password);
+  }
+  const resetPassword= async () =>{
+    const email= emailRef.current.value;
+    await sendPasswordResetEmail(email);
+          alert('Sent email');
   }
   return (
     <div className="container w-50 mx-auto my-5">
@@ -75,7 +81,7 @@ const Login = () => {
       <p className="text-center">
         Forget Password?
         <button
-          className="btn btn-link text-primary pe-auto text-decoration-none"
+          className="btn btn-link text-primary pe-auto text-decoration-none" onClick={resetPassword}
         >
           Reset Password
         </button>
