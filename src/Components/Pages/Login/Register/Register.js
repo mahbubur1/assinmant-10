@@ -7,8 +7,7 @@ import '../../../Shared/CustomCss/Custom.css'
 import { useRef } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import Loading from "../../../Shared/Loading/Loading";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
   const nameRef = useRef('');
@@ -18,10 +17,10 @@ const Register = () => {
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
-    const [updateProfile, updating, updatError] = useUpdateProfile(auth);
+    const [updateProfile, updating] = useUpdateProfile(auth);
     let errorMessage;
 
-    if (loading) {
+    if (loading || updating) {
       return <Loading></Loading>
     }
     if(user){
@@ -40,11 +39,12 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName:name });
-        toast('Updated profile')
+        console.log('Updated profile')
         navigate("/home")  
     }
   return (
     <div className="container w-50 mx-auto my-5">
+      <div className="shadow-lg p-5  bg-body rounded">
       <h2 className="custom-text-color text-center mt-2 mb-3">-  Please SignUp  -</h2>
       <Form onSubmit={handleFormRegister} >
           <Form.Group className="mb-3">
@@ -57,7 +57,7 @@ const Register = () => {
           <Form.Control type="password" ref={passwordRef} placeholder="Password" />
         </Form.Group>
         <Button variant=" d-block mb-2" className="button-style w-75 text-light mx-auto" type="submit">
-          Submit
+          Sing Up
         </Button>
         {errorMessage}
         <p className=" text-center">
@@ -71,7 +71,7 @@ const Register = () => {
           </p>
       </Form>
       <SocialLogin></SocialLogin>
-      <ToastContainer />
+      </div>
     </div>
   );
 };

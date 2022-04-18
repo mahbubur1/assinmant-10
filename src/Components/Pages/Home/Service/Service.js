@@ -1,32 +1,30 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import { Card, Button,Col } from "react-bootstrap";
-import '../../../Shared/CustomCss/Custom.css'
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import "../../../Shared/CustomCss/Custom.css";
 
 const Service = ({ service }) => {
   const { name, price, description, img } = service;
   return (
-    <Col sm>
-      <Card>
-        <Card.Img variant="top" className="w-100" src={img} />
-        <Card.Body>
-          <Card.Title>
-            {name}
-          </Card.Title>
-          <Card.Text>
-              {description}
-          </Card.Text>
-          <Card.Title>
-              Price: {price}
-          </Card.Title>
+    <div class="col shadow px-0 bg-body rounded">
+      <div class="card h-100">
+        <img src={img} class="card-img-top" alt="..." />
+        <div class="card-body" >
+          <h5 class="card-title">{name}</h5>
+          <p class="card-text">
+            {description}
+          </p>
+        </div>
+        <h5 className="ps-4">Price: {price}</h5>
+        <div >
           <Button className="button-style w-100">
             <Link className="text-decoration-none text-light" to="/checkout">
-            Checkout
+              Checkout
             </Link>
-            </Button>
-        </Card.Body>
-      </Card>
-    </Col>
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 

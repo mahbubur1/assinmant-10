@@ -13,9 +13,7 @@ import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 
 function App() {
   return (
-    <div style={{
-      backgroundColor:"#CAD5E2"
-      }}>
+    <div>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

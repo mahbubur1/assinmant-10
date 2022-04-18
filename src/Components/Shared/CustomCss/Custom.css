@@ -10,9 +10,13 @@
 .button-style{
     background-color:  #80db6c;
     border: none;
+
     
 }
 .button-style:hover{
     background-color: #1d720a;
+}
+.services-container{
+   background-color: #f6f6f4;
 }
 
